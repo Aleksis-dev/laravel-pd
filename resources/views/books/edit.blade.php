@@ -18,7 +18,7 @@
         </div>
     @endif
 
-    <form action="{{ route('book.edit', $editBook) }}" method="post">
+    <form action="{{ route('book.update', $editBook) }}" method="post">
         @csrf
         @method('put')
 
