@@ -23,9 +23,9 @@ class BookController extends Controller
             'released_at' => 'required|date',
         ]);
 
-        Book::create($data);
+        $book = Book::create($data);
 
-        return redirect()->route('book.show')->with('status', 'Book created successfully.');
+        return redirect()->route('book.show', $book)->with('status', 'Book created successfully.');
     }
 
     public function show(Book $book) {
